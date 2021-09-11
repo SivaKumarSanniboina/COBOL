@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PRG5.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       INPUT-OUTPUT SECTION.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       77    TECHNICAL         PIC     9(5)V99.
+       77    ENGLISH           PIC     9(5)V99.
+       77    GENERAL           PIC     9(5)V99.
+       PROCEDURE DIVISION.
+       0000-MAIN-PARA.
+           MOVE   85  TO TECHNICAL.
+           MOVE   89  TO ENGLISH.
+           MOVE   81   TO GENERAL.
+
+           IF TECHNICAL>75 AND ENGLISH>60  AND GENERAL>80 THEN
+           DISPLAY 'GRADE A'
+           ELSE IF TECHNICAL>75 AND ENGLISH>60 THEN
+           DISPLAY 'GRADE B'
+           ELSE IF ENGLISH>60 AND GENERAL>80 THEN
+           DISPLAY'GRADE C'
+           ELSE IF TECHNICAL>75  AND GENERAL>80 THEN
+           DISPLAY 'GRADE D'
+           ELSE
+           DISPLAY'GRADE E'
+           END-IF.
+           STOP RUN.
